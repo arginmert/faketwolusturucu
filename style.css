@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif, 'Ubuntu';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    border: none;
+}
+
+.degisim {
+    width: 400px;
+    height: 100%;
+    margin-right: 70px;
+    background: #06113C;
+}
+
+.degisimkutusu {
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.degisimkutusu h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#demo {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.degisim .degisimkutusu .profilFotosu label {
+    display: inline-block;
+    background-color: #fff;
+    width: 100%;
+    color: #2666CF;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
+.degisim .degisimkutusu .tweetFotosu label {
+    display: inline-block;
+    background-color: #fff;
+    width: 100%;
+    color: #2666CF;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
+.degisimkutusu input[type=text] {
+    background-color: #fff;
+    width: 100%;
+    color: #2666CF;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    align-items: center;
+    text-align: center;
+}
+
+.degisimkutusu .sayAyar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.degisimkutusu .sayAyar .sayLike {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.degisimkutusu .sayAyar h3 {
+    margin-bottom: -15px;
+}
+
+.degisimkutusu .cihaz select {
+    background-color: #fff;
+    width: 100%;
+    color: #2666CF;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    align-items: center;
+    text-align: center;
+}
+
+.degisimkutusu .verifiedBtm {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.degisimkutusu .verifiedBtm h3 {
+    margin-right: 10px;
+}
+
+.degisimkutusu .verifiedBtm input[type=checkbox] {
+    display: none;
+}
+
+.degisimkutusu .verifiedBtm input+label {
+    font-size: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid #fff;
+    border-radius: 0.5rem;
+    background: #fff;
+    transition: .1s all;
+    cursor: pointer;
+    z-index: 999 !important;
+}
+
+.degisimkutusu .verifiedBtm input[type=checkbox]:checked+label {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid #fff;
+    border-radius: 0.5rem;
+    background: #2666CF;
+}
+
+.degisimkutusu .degisimBtns {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.degisimkutusu .degisimBtns button {
+    width: 50%;
+    border-radius: 0.3rem;
+    background-color: #00acee;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 20px 30px;
+    text-align: center;
+    align-items: center;
+    transition: .1s all;
+}
+
+.degisimkutusu .degisimBtns button:hover {
+
+    background-color: #2666CF;
+}
+
+#box1 {
+    width: 400px;
+    height: 400px;
+    border: 2px solid #000;
+}
+
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card {
+    min-width: 50%;
+    position: relative;
+    min-height: 346px;
+    width: 690px;
+    background: #fff;
+    box-shadow: 15px 15px 60px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border: rgb(207, 207, 207) 1px solid;
+    color: #0f1419;
+}
+
+.dark-mode {
+    position: relative;
+    min-height: 346px;
+    width: 690px;
+    background: #141F2A;
+    box-shadow: 15px 15px 60px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border: rgb(207, 207, 207) 1px solid;
+    color: #fff;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .top .userDetails {
+    display: flex;
+    align-items: center;
+}
+
+.card .top .userDetails .profileImg {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 10px;
+    box-shadow: (0 0 0 / 3%) 0px 0px 2px inset;
+    border: 1px solid rgb(97, 111, 123);
+}
+.card .top .userDetails .profileImg img{
+    width: 48px;
+    height: 48px;
+    align-items: center;
+}
+
+.card .top .userDetails .userInfo {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card .top .userDetails .userInfo h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3em;
+}
+
+.card .top .userDetails .userInfo h3:hover {
+    text-decoration: underline;
+}
+
+.card .top .userDetails .userInfo h4 {
+    color: #536471;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+.verified {
+    margin-left: 1px;
+    margin-top: -18px;
+}
+
+.verified img {
+    width: 16px;
+    height: 16px;
+}
+
+.treeDot {
+    transform: rotate(90deg) scale(0.5);
+    cursor: pointer;
+    opacity: 0.6;
+    margin-top: -25px;
+    padding-left: 30px;
+}
+
+.tweet {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.tweet p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+#hastag {
+    color: rgb(29, 155, 240);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    cursor: pointer;
+}
+
+.tweetImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 12px 0;
+    border-radius: 12px;
+}
+
+.tweetImage img {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.tweetDetails {
+    display: flex;
+    margin: 16px 0;
+    color: #536471;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.tweetDetails .tweetTime {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.tweetDetails .tweetTime:hover {
+    text-decoration: underline;
+}
+
+.tweetDetails .tweetPhone {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.tweetDetails .tweetPhone:hover {
+    text-decoration: underline;
+}
+
+.tweetStatistics {
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    padding: 16px 0px;
+    border-top: 1px solid rgb(239, 243, 244);
+    border-bottom: 1px solid rgb(239, 243, 244);
+}
+
+.tweetStatistics b {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #0f1419;
+    margin-right: 4px;
+}
+
+.tweetStatistics p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(83 99 112);
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.tweetStatistics p:hover {
+    text-decoration: underline;
+}
+
+.Btns {
+    width: 22.5px;
+    height: 22.5px;
+    color: red;
+    /*color: rgb(83, 100, 113);*/
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.actionBtns {
+    height: 48px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgb(239, 243, 244);
+}
+
+.actionBtns img {
+    height: 45px;
+    text-align: center;
+    align-items: center;
+    margin-left: 50px;
+    cursor: pointer;
+}

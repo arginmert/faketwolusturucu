@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Fake Tweet Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="degisim">
+        <div class="degisimkutusu">
+            <div class="profilFotosu">
+                <h3>Profil Fotoğrafı Yükle:</h3>
+                <input type="file" multiple accept="image/*" id="images" hidden>
+                <label for="images">Resim Yükle</label>
+            </div>
+            <div class="tweetFotosu">
+                <h3>Tweet Fotoğrafı Yükle:</h3>
+                <input type="file" multiple accept="image/*" id="tweetBg" hidden>
+                <label for="tweetBg">Resim Yükle</label>
+            </div>
+            <h3>İsim:</h3>
+            <input type="text" id="kullaniciIsmi" placeholder="Görüntülenecek Kullanıcı İsmini Giriniz." required>
+            <h3>Kullanıcı Adı:</h3>
+            <input type="text" id="kullaniciAdi" placeholder="Görüntülenecek Kullanıcı Adı Giriniz.">
+            <h3>Tweet:</h3>
+            <input type="text" id="tweetGir" placeholder="Görüntülenecek Tweet Giriniz.">
+            <h3>Etiketler:</h3>
+            <input type="text" id="etiketSec" placeholder="Görüntülenecek Hastaglerı Başında # ile Giriniz.">
+            <div class="sayAyar">
+                <div class="sayLike">
+                    <h3>Beğeni:</h3><br>
+                    <input type="text" id="begeniSayisi" pattern="\d*" title="Sadece sayısal değer girilebilir"
+                        required>
+                </div>
+                <div class="sayRt">
+                    <h3>Retweet:</h3> <br>
+                    <input type="text" id="rtSayisi" pattern="\d*" title="Sadece sayısal değer girilebilir" required>
+                </div>
+                <div class="sayAlinti">
+                    <h3>Alıntı Tweet:</h3> <br>
+                    <input type="text" id="alintiSayisi" pattern="\d*" title="Sadece sayısal değer girilebilir"
+                        required>
+                </div>
+            </div>
+            <div class="cihaz">
+                <h3> Cihaz Seçin:</h3>
+                <select id="cihazsecim" name="secim">
+                    <option value="iphone">Twitter for iPhone</option>
+                    <option value="android">Twitter for Android</option>
+                    <option value="web">Twitter Web App</option>
+                </select>
+            </div>
+            <div class="verifiedBtm">
+                <h3>Doğrulanmış Hesap: </h3>
+                <input type="checkbox" id="myCheck" onclick="verifiedButton()">
+                <label for="myCheck"></label>
+            </div>
+            <div class="degisimBtns">
+                <button class="hazirlaBtn" type="button" onclick="deneme()">Hazırla</button>
+                <button id="download" onclick="down()"> Download </button>
+            </div>
+            <p id="demo"></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profileImg">
+                    <img src="images/profile.png" class="cover" id="myImageId">
+                </div>
+                <div class="userInfo">
+                    <h3 id="userNick">Mert Deniyor...</h3>
+                    <h4 id="userName">@denememert</h4>
+                </div>
+                <div class="verified">
+
+                </div>
+            </div>
+            <div class="treeDot">
+                <img src="images/dot.png">
+            </div>
+        </div>
+        <div class="tweet">
+            <p id="tweet">Bu bir deneme tweetidir. Buraya 280 karakter uzunluğunda istediğiniz içeriği yazabilirsiniz.</p>
+            <p id="hastag"></p>
+        </div>
+        <div class="tweetImage">
+        </div>
+        <div class="tweetDetails">
+            <div class="tweetTime">ÖS 8:14 · 28 May 2022 - </div>
+            <div class="tweetPhone">Twitter for iPhone</div>
+        </div>
+        <div class="tweetStatistics">
+            <div class="retweet">
+                <p><b>220</b>Retweet</p>
+            </div>
+            <div class="quotes">
+                <p><b>14</b>Alıntı Tweet</p>
+            </div>
+            <div class="likes">
+                <p><b>532</b>Beğeni</p>
+            </div>
+        </div>
+        <div class="actionBtns">
+            <img src="images/tw1.JPG" class="heart" onclick="likeButton()">
+            <div class="likeBtn Btns ">
+
+            </div>
+        </div>
+    </div>
+    <script src="twmain.js"></script>
+    <script src="html2canvas.js"></script>
+</body>
+
+</html>
